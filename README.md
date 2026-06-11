@@ -127,17 +127,13 @@ ping -c 2 172.16.0.2          # 應該失敗 (Network unreachable)
 依照第 3、4 節分別在 VM2、VM1 啟動 `vpn_server` / `vpn_client`，截圖兩端輸出：
 
 - VM2：
-  ```
-  <img width="937" height="327" alt="image" src="https://github.com/user-attachments/assets/45f2c57a-528e-476b-aae5-e7c19067d53d" />
+
+  <img width="960" height="440" alt="image" src="https://github.com/user-attachments/assets/828f9969-8e34-443b-be67-067b9a2be1c3" />
 
 
-  ```
 - VM1：
-  ```
-  <img width="776" height="181" alt="image" src="https://github.com/user-attachments/assets/84d3ec1b-eb45-4727-a5ae-201571025526" />
+  <img width="960" height="440" alt="image" src="https://github.com/user-attachments/assets/4751e7e1-a5fd-4cc9-b764-895e2fde5fd7" />
 
-
-  ```
 
 → 兩端同時出現 `TLS handshake OK`，證明憑證鏈驗證成功、mutual TLS 建立完成。
 

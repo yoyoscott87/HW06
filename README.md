@@ -107,9 +107,8 @@ sudo ./vpn_client 192.168.2.1          # 預設連到 4433
 
 ---
 
-## 5. 驗證 VPN 是否生效（含截圖建議）
+## 5. 驗證 VPN 是否生效
 
-以下步驟可依序操作並截圖，作為報告中「VPN 已成功建立並生效」的證據。
 
 ### 5.1 啟動前：證明沒有 VPN 就到不了內網
 
@@ -119,6 +118,7 @@ sudo ./vpn_client 192.168.2.1          # 預設連到 4433
 ip route show | grep 172.16   # 應該沒有任何結果
 ping -c 2 172.16.0.2          # 應該失敗 (Network unreachable)
 ```
+<img width="777" height="155" alt="image" src="https://github.com/user-attachments/assets/6ef57511-f833-4b61-bce0-02dd38a9e654" />
 
 → 證明在沒有 VPN 的情況下，VM1 本來就無法存取 172.16.0.0/24。
 

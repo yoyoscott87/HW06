@@ -145,12 +145,8 @@ VM1：
 
 
 VM2：
+<img width="1123" height="452" alt="image" src="https://github.com/user-attachments/assets/bd5add5d-dea0-413a-ace6-520c4e233445" />
 
-```bash
-ip addr show tap0             # 應顯示 10.10.10.3/24
-sysctl net.ipv4.ip_forward    # 應為 1
-iptables -L FORWARD -v -n     # 應看到 10.10.10.0/24 <-> 172.16.0.0/24 的 ACCEPT 規則
-```
 
 ### 5.4 連通性測試（核心證據）
 

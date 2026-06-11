@@ -120,7 +120,7 @@ ping -c 2 172.16.0.2          # 應該失敗 (Network unreachable)
 ```
 <img width="777" height="155" alt="image" src="https://github.com/user-attachments/assets/6ef57511-f833-4b61-bce0-02dd38a9e654" />
 
-→ 證明在沒有 VPN 的情況下，VM1 本來就無法存取 172.16.0.0/24。
+→ 在沒有 VPN 的情況下，VM1 本來就無法存取 172.16.0.0/24。
 
 ### 5.2 啟動 VPN，確認 mutual TLS handshake 成功
 
@@ -128,13 +128,15 @@ ping -c 2 172.16.0.2          # 應該失敗 (Network unreachable)
 
 - VM2：
   ```
-  [*] client connected from 192.168.2.3:xxxxx
-  [*] TLS handshake OK (cipher: ...)
+  <img width="937" height="327" alt="image" src="https://github.com/user-attachments/assets/45f2c57a-528e-476b-aae5-e7c19067d53d" />
+
+
   ```
 - VM1：
   ```
-  [*] connected to 192.168.2.1:4433 (TCP)
-  [*] TLS handshake OK (cipher: ...)
+  <img width="776" height="181" alt="image" src="https://github.com/user-attachments/assets/84d3ec1b-eb45-4727-a5ae-201571025526" />
+
+
   ```
 
 → 兩端同時出現 `TLS handshake OK`，證明憑證鏈驗證成功、mutual TLS 建立完成。

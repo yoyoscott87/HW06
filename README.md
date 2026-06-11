@@ -179,6 +179,8 @@ traceroute 172.16.0.2     # 應可看到 10.10.10.3 為中繼跳點
 ```bash
 sudo tcpdump -ni tap0 -X icmp
 ```
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c79c0190-744d-44ca-83ef-c86aab330e41" />
+
 
 → 可以看到完整明文的 ICMP echo request/reply。
 
@@ -187,11 +189,12 @@ sudo tcpdump -ni tap0 -X icmp
 ```bash
 sudo tcpdump -ni enp0s8 -X host 192.168.2.1
 ```
-（介面名稱依實際環境調整，VM1 上對應 192.168.2.0/24 的網卡）
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8c29fbd8-24fe-4648-86cd-e63739f53c14" />
+
 
 → 應只看到 TLS Application Data，看不到任何 ICMP 字樣或明文內容。
 
-兩張截圖並列，說明「同一份 ICMP 封包，在 tap0 是明文，在實體網卡上已被
+說明「同一份 ICMP 封包，在 tap0 是明文，在實體網卡上已被
 TLS 加密成 Application Data」，即可證明加密生效。
 
 

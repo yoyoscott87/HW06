@@ -192,10 +192,10 @@ sudo tcpdump -ni enp0s8 -X host 192.168.2.1
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8c29fbd8-24fe-4648-86cd-e63739f53c14" />
 
 
-→ 應只看到 TLS Application Data，看不到任何 ICMP 字樣或明文內容。
+→ 只看到 TLS Application Data，看不到任何 ICMP 字樣或明文內容。
 
 說明「同一份 ICMP 封包，在 tap0 是明文，在實體網卡上已被
-TLS 加密成 Application Data」，即可證明加密生效。
+TLS 加密成 Application Data」，證明加密生效。
 
 
 ## 6. 三台 VM 的網路/路由設定總覽

@@ -141,10 +141,8 @@ ping -c 2 172.16.0.2          # 應該失敗 (Network unreachable)
 
 VM1：
 
-```bash
-ip addr show tap0             # 應顯示 10.10.10.2/24
-ip route show | grep 172.16   # 應顯示 172.16.0.0/24 via 10.10.10.3 dev tap0
-```
+<img width="960" height="440" alt="image" src="https://github.com/user-attachments/assets/3d6bd34c-7771-45fd-a43d-1712e0695554" />
+
 
 VM2：
 

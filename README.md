@@ -157,6 +157,11 @@ ping -c 4 10.10.10.3      # 測試 tunnel 本身 (VM1 <-> VM2 tap)
 ping -c 4 172.16.0.2      # 經由 tunnel + VM2 forward 到 VM3，TTL 應為 63
 traceroute 172.16.0.2     # 應可看到 10.10.10.3 為中繼跳點
 ```
+<img width="960" height="440" alt="image" src="https://github.com/user-attachments/assets/86643047-bb63-409a-8db4-06b795fcca65" />
+<img width="960" height="440" alt="image" src="https://github.com/user-attachments/assets/07acbf8e-3ef2-4afe-8b67-69b78577c878" />
+<img width="960" height="440" alt="image" src="https://github.com/user-attachments/assets/0723b3a4-bf5d-4f28-8797-cde210a1b53a" />
+
+
 
 `ping 172.16.0.2` 從 100% packet loss 變成全部 reply，且 TTL=63（經過 VM2
 一跳），是「VPN 生效、可存取內網主機」最直接的證據。
